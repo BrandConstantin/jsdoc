@@ -70,7 +70,7 @@ function add(n2, n3){
 const addTwo = (n2, n3) => `The result is ${n2 + n3}`;
 
 
-/* Objects */
+/* Custom Types */
 /**
 * User
 * @typedef {Object} User
@@ -123,8 +123,35 @@ class Programmer{
         console.log("I'm ${this.fullName} and my favorite programming is ${this.language}");
     }
 }
+
+/**
+* know more in {@link Programmer}
+*/
 const progOne = new Programmer({fullName: "Constantin Brindusoiu"}, "javascript");
 const progTwo = new Programmer({fullName: "Constantin Brindusoiu"}, "php");
 
 progOne.getInfo();
 progTwo.getInfo();
+
+/* Modulos */
+/**
+* My math library - Learn More {@tutorial second-tutorial}
+* @module MyMath
+*/
+/**
+* Add two numbers
+* @param {number} x First Number
+* @param {number} y Second Number
+* @returns {number} Sum of x and y
+*/
+const add = (x, y) => x + y;
+/**
+* Substract two numbers
+* @param {number} x First Number
+* @param {number} y Second Number
+* @returns {number} Substract of x and y
+*/
+const substract = (x, y) => x - y;
+
+// exportar el modulo
+module.exports = {add, substract}
