@@ -155,3 +155,36 @@ const substract = (x, y) => x - y;
 
 // exportar el modulo
 module.exports = {add, substract}
+
+
+import express from "express"
+const app = express()
+
+/* API */
+/**
+ * @module api
+ */
+/**
+ * Index Rout
+ * @name index
+ * @path {GET} /
+ */
+app.get('/', (req, res) => res.send('Welcome'));
+/**
+ * Index Rout
+ * @name users
+ * @path {POST} /users
+ */
+app.post('/users', (req, res) => res.send('Users'));
+/**
+ * Index Rout
+ * @name products
+ * @path {DELETE} /products
+ */
+app.delete('/products', (req, res) => res.send('Products'));
+/**
+ * Index Rout
+ * @name login
+ * @path {POST} /login
+ */
+app.post('/login', (req, res) => res.send('Login'));
